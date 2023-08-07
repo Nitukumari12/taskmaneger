@@ -1,0 +1,41 @@
+<%- include("particals/header")%>
+<%- include("particals/nav")%>
+
+
+<div class="todo">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Task</th>
+                                <th scope="col">status</th>
+                                <th scope="col">Update</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% post.forEach(function(pos,idx){ %>
+                                <tr>
+                                    <th scope="row"><%= idx+1 %></th>
+                                    <td><%=pos.name%></td>
+                                    <td><%=pos.task%></td>
+                                    <td><%=pos.status%></td>
+                                    <td> <a href="/update/<%=pos._id%>">Update</a></td>
+                                    <td> <a href="/delete/<%=pos._id%>">Delete</a> </td>
+                                </tr>
+                            <%})%>
+                        </tbody>
+                    </table>
+                </th>
+            </tr>
+        </thead>
+
+    </table>
+  </div>
+
+<%- include("particals/footer")%>

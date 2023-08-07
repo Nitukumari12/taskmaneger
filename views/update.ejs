@@ -1,0 +1,23 @@
+<%- include("particals/header") %>
+<%- include("particals/nav") %>
+<h1>welocome to update your task</h1>
+    <p>welocome to update your task</p>
+    <div class="form">
+        <form style="margin-left:25%; width:50% ;" class="form-control" action="/update/<%=post._id%>" method="post" >
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input value="<%=post.name%>" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInput" class="form-label">Task</label>
+                <input value="<%=post.task%>" type="text" class="form-control" id="exampleInput" name="task" required> 
+              </div>
+              <div class="mb-3">
+                <label for="exampleInput" class="form-label">Status</label>
+                <input value="<%=post.status%>" type="text" class="form-control" id="exampleInput" name="status" required> 
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    

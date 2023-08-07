@@ -1,0 +1,22 @@
+<%- include("particals/header") %>
+<%- include("particals/nav") %>
+<h1><%= title %></h1>
+    <p>welocome to <%= title %></p>
+    <div class="form">
+        <form style="margin-left:25%; width:50% ;" class="form-control" action="/taskmanager" method="post" >
+            <div class="mb-1">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInput" class="form-label">Task</label>
+                <input type="text" class="form-control" id="exampleInput" name="task" required> 
+              </div>
+              <div class="mb-3">
+                <label for="exampleInput" class="form-label">Status</label>
+                <input type="text" class="form-control" id="exampleInput" name="status" required> 
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+<%- include("particals/footer")%>
